@@ -11,6 +11,7 @@ pushd $HOME/dev/src
 git clone https://github.com/nodejs/node
 pushd node
 ./configure
+make -j$(nproc)
 sudo make install
 popd
 popd
