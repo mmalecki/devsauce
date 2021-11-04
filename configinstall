@@ -1,0 +1,23 @@
+#!/bin/bash
+READLINK=readlink
+which greadlink && READLINK=greadlink
+pluginpath="$(dirname "$($READLINK -f $0)")"
+
+ln -svf $pluginpath/gitconfig "$HOME/.gitconfig"
+
+mkdir -p $HOME/dev/{src,c,js,rust,go}
+
+pushd $HOME/dev/src
+git clone https://github.com/nodejs/node
+pushd node
+./configure
+sudo make install
+popd
+popd
+
+npm -g install json clocker
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+git clone https://github.com/tfutils/tfenv.git ~/.tfenv
+git clone https://github.com/cunymatthieu/tgenv.git ~/.tgenv

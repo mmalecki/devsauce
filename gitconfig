@@ -1,0 +1,15 @@
+[user]
+  name = Maciej Małecki
+  email = me@mmalecki.com
+
+[push]
+  default = current
+
+[pull]
+  rebase = true
+
+[rebase]
+  autostash = true
+
+[rerere]
+  enabled = true
