@@ -18,7 +18,7 @@ popd
 
 npm config set prefix $HOME/npm
 
-npm -g install json clocker
+npm -g install json clocker http-console2
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
