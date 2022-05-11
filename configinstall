@@ -7,7 +7,8 @@ ln -svf $pluginpath/gitconfig "$HOME/.gitconfig"
 
 mkdir -p $HOME/dev/{src,c,js,rust,go}
 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --no-modify-path
+source $HOME/.cargo/env
 
 git clone https://github.com/tfutils/tfenv.git ~/.tfenv
 git clone https://github.com/cunymatthieu/tgenv.git ~/.tgenv
