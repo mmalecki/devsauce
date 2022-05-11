@@ -7,8 +7,6 @@ ln -svf $pluginpath/gitconfig "$HOME/.gitconfig"
 
 mkdir -p $HOME/dev/{src,c,js,rust,go}
 
-npm config set prefix $HOME/npm
-
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 git clone https://github.com/tfutils/tfenv.git ~/.tfenv
@@ -20,6 +18,7 @@ cargo install fnm # node.js version manager
 eval $(fnm env) # enable node.js
 fnm install --lts
 
+npm config set prefix $HOME/npm
 npm -g install json clocker http-console2
 
 echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | \
