@@ -14,6 +14,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 git clone https://github.com/tfutils/tfenv.git ~/.tfenv
 git clone https://github.com/cunymatthieu/tgenv.git ~/.tgenv
 
+pip install lice  # a license generation tool
 cargo install fnm # node.js version manager
 
 eval $(fnm env) # enable node.js
