@@ -13,11 +13,10 @@ source $HOME/.cargo/env
 git clone https://github.com/tfutils/tfenv.git ~/.tfenv
 git clone https://github.com/cunymatthieu/tgenv.git ~/.tgenv
 
-pip install lice  # a license generation tool
 cargo install fnm # node.js version manager
 
 eval $(fnm env) # enable node.js
 fnm install --lts
 
 npm config set prefix $HOME/npm
-npm -g install json clocker http-console2
+npm -g install json clocker http-console2 generate generate-license
