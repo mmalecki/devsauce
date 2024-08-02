@@ -5,7 +5,7 @@ pluginpath="$(dirname "$($READLINK -f $0)")"
 
 ln -svf $pluginpath/gitconfig "$HOME/.gitconfig"
 
-mkdir -p $HOME/dev/{src,c,js,rust,go,electronics}
+mkdir -p $HOME/dev/{src,c,js,rust,go,electronics,www}
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --no-modify-path
 source $HOME/.cargo/env
