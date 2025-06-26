@@ -13,10 +13,18 @@ source $HOME/.cargo/env
 git clone https://github.com/tfutils/tfenv.git ~/.tfenv
 git clone https://github.com/cunymatthieu/tgenv.git ~/.tgenv
 
-cargo install fnm # node.js version manager
+cargo install fnm ldproxy # node.js version manager
 
 eval $(fnm env) # enable node.js
 fnm install --lts
 
 npm config set prefix $HOME/npm
 npm -g install json clocker http-console2 generate generate-license
+
+which pipx && pipx install git+https://github.com/CadQuery/CQ-editor.git \
+  --preinstall git+https://github.com/CadQuery/cadquery.git \
+  --preinstall spyder==5 --preinstall pyqtgraph --preinstall logbook \
+  --preinstall PyQt5 \
+  --preinstall git+https://github.com/gumyr/build123d.git \
+  --preinstall cqgridfinity \
+  --preinstall cq-queryabolt
